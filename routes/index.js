@@ -1,13 +1,12 @@
 const express = require('express')
 const router = express.Router()
-const list = require('/list')
-const modify = require('/modify')
-const view = require('/view')
-const write = require('/write')
+const board = require('./board.route')
+const gallery = require('./gallery.route')
+const notice = require('./notice.route')
 
-router.use('/list', list)
-router.use('/modify', modify)
-router.use('/view', view)
-router.use('/write', write)
 
-module.exports = router
+router.use('/board', board)
+router.use('/gallery', gallery)
+router.use('/notice', notice)
+
+ module.exports = router
